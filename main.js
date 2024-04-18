@@ -6,6 +6,7 @@ const {createApp} = Vue;
 createApp({
     data () {
         return {
+            activeIndex: 0,
             game: {
                 images: [
                     "./img/01.webp",
