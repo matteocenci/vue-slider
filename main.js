@@ -34,6 +34,14 @@ createApp({
         }
     },
     methods: {
+        showNext: function() {
+            this.activeIndex++;
+        },
+
+        showPrev: function(){
+            this.activeIndex--;
+        }
 
     }
 }).mount("#app");
+
