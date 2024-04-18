@@ -33,13 +33,28 @@ createApp({
             }
         }
     },
+    created() {
+        console.log("CREATED!!!");
+        setInterval(() => {
+            console.log(this);
+            console.log("sono interval", this.showNext());
+        }, 3000)
+    },
     methods: {
         showNext: function() {
-            this.activeIndex++;
+            if(this.activeIndex === this.game.images.length-1){
+                this.activeIndex = 0;
+            } else {
+                this.activeIndex++;
+            }
         },
 
         showPrev: function(){
-            this.activeIndex--;
+            if(this.activeIndex === 0){
+                this.activeIndex = this.game.images.length-1;
+            } else {
+                this.activeIndex--;
+            }
         }
 
     }
